@@ -1,4 +1,4 @@
-form {
+.booking-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,21 +20,21 @@ form {
   flex-direction: column;
 }
 
-form label {
+.booking-form label {
   display: flex;
   flex-direction: column;
   font-size: 14px;
   margin: 10px 0px;
 }
 
-form label input {
+.booking-form label input {
   height: 25px;
   width: 150px;
   font-size: 12px;
   margin-top: 2px;
 }
 
-form button {
+.booking-form button {
   width: 200px;
   height: 40px;
   font-size: 14px;
@@ -43,6 +43,6 @@ form button {
   background-color: #006edc;
 } 
 
-form button:disabled {
+.booking-form button:disabled {
   background-color: grey;
 }
