@@ -18,7 +18,7 @@ export class BookingForm extends Component {
   render() {
     const { firstName, lastName, email, phone } = this.state;
     return (
-      <form>
+      <form className="booking-form">
         <section className="BookingForm_input-container">
           <div className="BookingForm-left-side">
             <label htmlFor="firstName">First Name:
