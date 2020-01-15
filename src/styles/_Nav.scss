@@ -2,6 +2,12 @@ nav {
   display: flex;
   align-items: center;
   padding: 5px 10px;
+  justify-content: space-between;
+}
+
+nav .navlink-container {
+  display: flex;
+  align-items: center;
 }
 
 nav a {

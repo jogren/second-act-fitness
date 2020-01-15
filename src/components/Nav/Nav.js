@@ -12,6 +12,7 @@ export class Nav extends Component {
   render() {
     return (
       <nav>
+        <div className="navlink-container">
         <NavLink to="/">
           <h1>SecondActFitness</h1>
         </NavLink>
@@ -20,12 +21,16 @@ export class Nav extends Component {
             <li>Home</li>
           </NavLink>
           <NavLink to="/about">
-            <li>About Us</li>
+            <li>About</li>
           </NavLink>
           <NavLink to="/book-online">
             <li>Book Online</li>
           </NavLink>
         </ul>
+        </div>
+        <NavLink to="/admin-login">
+          <button>Admin Login</button>
+        </NavLink>
       </nav>
     )
   }
