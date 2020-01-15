@@ -1,0 +1,26 @@
+.Login_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container {
+  width: 50%;
+}
+
+.login-form {
+  display: flex;  
+  flex-direction: column;
+}
+
+.login-form input {
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  color: #fff;
+  height: 25px;
+  border: 1px solid black;  
+  background-color: black;
+}
