@@ -12,7 +12,9 @@ export class Nav extends Component {
   render() {
     return (
       <nav>
-        <h1>SecondActFitness</h1>
+        <NavLink to="/">
+          <h1>SecondActFitness</h1>
+        </NavLink>
         <ul>
           <NavLink to="/">
             <li>Home</li>
