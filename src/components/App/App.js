@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { Nav } from '../Nav/Nav';
+// import { Header } from '../Header/Header';
+import { About } from '../About/About';
+import { Book } from '../Book/Book';
+import { Route } from 'react-router-dom';
+
 
 class App extends Component {
   constructor() {
@@ -12,8 +17,9 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <h1>Second Act Fitness</h1>
         <Nav />
+        <Route path="/about" component={ About } />
+        <Route path="/book-online" component={ Book } />
       </main>
     );
   }
