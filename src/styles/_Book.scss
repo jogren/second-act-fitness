@@ -1,0 +1,66 @@
+.pick-appo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.appo-list-container {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+}
+
+.button_pick-appo-item {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.time-item-selected,
+.time-item-not-selected {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.time-item-not-selected {
+  border: 1px solid black;
+}
+
+.time-item-selected {
+  color: #fff;
+  background-color: #006edc
+}
+
+.calendar-container {
+  display: flex;
+  padding: 20px 60px;
+  margin-bottom: 20px;
+}
+
+.react-calendar {
+  width: 45%;
+  margin-right: 5%;
+}
+
+.react-calendar__navigation__label {
+  font-size: 14px;
+}
+
+.react-calendar__tile {
+  font-size: 14px;
+}
+
+.booking-container p {
+  text-align: center;
+}
