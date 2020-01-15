@@ -1,0 +1,48 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BookingForm_input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.BookingForm-left-side {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}
+
+.BookingForm-right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin: 10px 0px;
+}
+
+form label input {
+  height: 25px;
+  width: 150px;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+form button {
+  width: 200px;
+  height: 40px;
+  font-size: 14px;
+  margin: 5px;
+  color: #fff;
+  background-color: #006edc;
+} 
+
+form button:disabled {
+  background-color: grey;
+}
