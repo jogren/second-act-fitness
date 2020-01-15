@@ -15,6 +15,11 @@ export class BookingForm extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  validateEmail = email => {
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
+  }
+
   render() {
     const { firstName, lastName, email, phone } = this.state;
     return (
