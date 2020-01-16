@@ -1,6 +1,28 @@
-header img {
-  background-repeat: no-repeat;
-  // background-size: contain;
-  width: 100%;
-  
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+header {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content-container {
+  margin-left: 10%;
+  color: #fff;
+  background-color: #606060;
+  opacity: 0.7;
+  padding: 50px;
+  border-radius: 7px;
+}
+
+.Header_h1 {
+  margin-bottom: 10px;
+  font-family: Helvetica;
+  letter-spacing: 5px;
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+
+#cursor {
+  border-left: .1em solid rgb(255, 255, 255);
 }
