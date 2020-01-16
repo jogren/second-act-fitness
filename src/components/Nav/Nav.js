@@ -14,9 +14,9 @@ export class Nav extends Component {
       <nav>
         <div className="navlink-container">
         <NavLink to="/">
-          <h1>SecondActFitness</h1>
+          <h1 className="Nav-title">Second Act Fitness</h1>
         </NavLink>
-        <ul>
+        <ul className="Nav_ul">
           <NavLink to="/">
             <li>Home</li>
           </NavLink>
