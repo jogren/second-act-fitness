@@ -21,9 +21,6 @@ export class Login extends Component {
     const { loginEmail, loginPassword } = this.state;
     return (
       <section className="Login_section">
-        <header>
-          <h1 className="title">SecondActFitness</h1>
-        </header>
         <article className="login-container">
           <h4>Login</h4>
           <form className="login-form">
