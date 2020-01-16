@@ -1,0 +1,13 @@
+.section_home {
+  height: 90vh;
+  background: url('../images/minneapolis2.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('../images/minneapolis2.jpg');
+  // background-attachment: fixed;
+  background-size: cover;
+  // background-position: top;
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  // overflow: auto;
+}

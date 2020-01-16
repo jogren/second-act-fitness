@@ -1,7 +1,6 @@
 nav {
   display: flex;
   align-items: center;
-  padding: 5px 10px;
   justify-content: space-between;
 }
 
@@ -12,22 +11,40 @@ nav .navlink-container {
 
 nav a {
   text-decoration: none;
-  color: black;
 }
 
-h1 {
+.Nav-title {
   margin-right: 20px;
+  color: #F5F5F5;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  padding: 25px 0px 25px 25px;
 }
 
-ul {
+.Nav_ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-li {
+.Nav_ul li {
   float: left;
   padding: 10px;
-  color: black;
+  color: #F5F5F5;
+  font-weight: bold;
+  padding: 25px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.Nav_ul li:hover {
+  border-bottom: 2px solid #F5F5F5;
+}
+
+nav button {
+  padding: 7px;
+  border: 2px solid #F5F5F5;
+  background: none;
+  color: #F5F5F5;
+  margin-right: 25px;
 }
