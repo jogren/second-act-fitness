@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 
 export class BookingForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
+      name: '',
       email: '',
-      phone: ''
+      phone: '',
+      street: '',
+      city: '',
+      aptNumber: '',
+      state: '',
+      message: ''
     }
   }
 
   handleChange = (e) => {
+    const { name, email, street, city } = this.state;
     this.setState({ [e.target.name]: e.target.value })
+    if(name && email && street && city) {
+      this.props.toggleBookEnabled();
+    }
+
   }
 
   validateEmail = email => {
@@ -21,52 +30,80 @@ export class BookingForm extends Component {
   }
 
   render() {
-    const { firstName, lastName, email, phone } = this.state;
+    // const { firstName, lastName, email, phone } = this.state;
     return (
       <form className="booking-form">
-        <section className="BookingForm_input-container">
-          <div className="BookingForm-left-side">
-            <label htmlFor="firstName">First Name:
-              <input 
-                name="firstName"
-                id="firstName"
-                value={this.state.firstName}
-                placeholder="John"
-                onChange={(e) => this.handleChange(e)}
-              />
-            </label>
-            <label htmlFor="lastName">Last Name: 
+        <button onClick={this.props.changeView} className='back-btn'>◀ back</button>
+        <label htmlFor="name">Name *
+          <input 
+            name="name"
+            id="name"
+            value={this.state.name}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </label>
+        <label htmlFor="email">Email *
+          <input
+            name="email"
+            id="email"
+            value={this.state.email}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </label>
+        <label htmlFor="phone">Phone Number *
+          <input
+            name="phone"
+            id="phone"
+            value={this.state.phone}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </label>
+        <div className="BookingForm-input-container">
+          <label htmlFor="street" className="label-left">Street *
+            <input
+              name="street"
+              id="street"
+              value={this.state.street}
+              onChange={(e) => this.handleChange(e)}
+            />
+          </label>
+          <label htmlFor="aptNumber" className="label-right">Apt. / Floor No.
               <input
-                name="lastName"
-                id="lastName"
-                value={this.state.lastName}
-                placeholder="Doe"
-                onChange={(e) => this.handleChange(e)}
-              />
-            </label>
-          </div>
-          <div className="BookingForm-right-side">
-            <label htmlFor="email">Email: 
+              name="aptNumber"
+              id="aptNumber"
+              value={this.state.aptNumber}
+              onChange={(e) => this.handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="BookingForm-input-container">
+          <label htmlFor="city" className="label-left">City *
               <input
-                name="email"
-                id="email"
-                value={this.state.email}
-                placeholder="john.doe@gmail.com"
-                onChange={(e) => this.handleChange(e)}
-              />
-            </label>
-            <label htmlFor="phone">Phone:
-              <input
-                name="phone"
-                id="phone"
-                value={this.state.phone}
-                placeholder="(555) 555-5555"
-                onChange={(e) => this.handleChange(e)}
-              />
-            </label>
-          </div>
-        </section>
-        <button disabled={!firstName || !lastName || !email || !phone}>Confirm Booking</button>
+              name="city"
+              id="city"
+              value={this.state.city}
+              onChange={(e) => this.handleChange(e)}
+            />
+          </label>
+          <label htmlFor="state" className="label-right">State
+                <input
+              name="state"
+              id="state"
+              value={this.state.state}
+              onChange={(e) => this.handleChange(e)}
+            />
+          </label>
+        </div>
+        <label htmlFor="email">Add Your Message
+            <input
+            name="message"
+            id="message"
+            value={this.state.message}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </label>
+        <p>* Required Info</p>
+        {/* <button disabled={!firstName || !lastName || !email || !phone}>Confirm Booking</button> */}
       </form>
     )
   }
