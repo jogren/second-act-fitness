@@ -4,7 +4,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export const HomePage = () => {
-
   return(
     <section className="HomePage-container">
       <h2>Minneapolis Home Fitness</h2>
