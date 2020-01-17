@@ -30,10 +30,11 @@ export class BookingForm extends Component {
   }
 
   render() {
-    // const { firstName, lastName, email, phone } = this.state;
     return (
       <form className="booking-form">
         <button onClick={this.props.changeView} className='back-btn'>◀ back</button>
+        <h3>Add Your Info </h3>
+        <p>Tell us a bit about yourself...</p>
         <label htmlFor="name">Name *
           <input 
             name="name"
@@ -103,7 +104,6 @@ export class BookingForm extends Component {
           />
         </label>
         <p>* Required Info</p>
-        {/* <button disabled={!firstName || !lastName || !email || !phone}>Confirm Booking</button> */}
       </form>
     )
   }
