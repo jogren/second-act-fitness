@@ -66,30 +66,35 @@ export class Book extends Component {
     return (
       <section className="Book_section">
         <h2>Schedule Online</h2>
-        <section className="calendar-container">
+        <div className="booking-shell">
           { view === 'booking' ? 
+          <article className="booking-form-article">
             <BookingForm changeView={this.changeView} toggleBookEnabled={this.toggleBookEnabled}/> 
+          </article>
           : 
-            <article className="article_calendar-time">
-              <Calendar
-                onChange={this.handleSelectDate}
-                value={date}
-              />
-              <div className="pick-appo-list">
-                <div className="appo-list-container">
-                  {inputList}
-                </div>
-              </div> 
-            </article> 
+          <article className="article_calendar-time">
+            <Calendar
+              onChange={this.handleSelectDate}
+              value={date}
+            />
+            <div className="pick-appo-list">
+              <div className="appo-list-container">
+                {inputList}
+              </div>
+            </div> 
+          </article> 
           }
-        </section>
-        <section className="booking-container">
-          <h3>In-Home Session</h3>
-          <p>1 hr | $25</p>
-          { this.handleBookingWindow() }
-          { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
-          {view === 'booking' && <button disabled={!isBookEnabled}>Book</button> }
-        </section>
+          <article className="booking-container">
+            <section className="booking-confirmation">
+              <h3>In Home Session</h3>
+              <p>1 hr | $25</p>
+              { this.handleBookingWindow() }
+              { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
+              {view === 'booking' && <button disabled={!isBookEnabled}>Book</button> }
+            </section>
+
+          </article>
+        </div>
       </section>
     )
   }
