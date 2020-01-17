@@ -27,19 +27,19 @@ class App extends Component {
           </section>
         } />
         <Route path="/about" render={() =>
-          <section>
+          <section className="section_about">
             <Nav />
             <About /> 
           </section>
         } />
         <Route path="/book-online" render={() => 
-          <section>
+          <section className="section_book-online">
             <Nav />
             <Book />
           </section>
         } />
         <Route path="/admin-login" render={() =>
-          <section>
+          <section className="section_admin-login">
             <Nav /> 
             <Login /> 
           </section>

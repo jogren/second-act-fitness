@@ -38,7 +38,7 @@ export class Book extends Component {
       return <button onClick={() => this.handleSelectTime(option)} className={borderClass} key={index}>{option}</button>
     })
     return (
-      <section>
+      <section className="Book_section">
         <h2>Book Online</h2>
         <section className="calendar-container">
           <Calendar

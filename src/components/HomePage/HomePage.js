@@ -7,7 +7,7 @@ export const HomePage = () => {
 
   return(
     <section className="HomePage-container">
-      <h2>About Us</h2>
+      <h2>Minneapolis Home Fitness</h2>
       <div className="HomePage_content-container">
         <ScrollAnimation animateIn="slideInLeft">
           <img src={runningImg} alt="HomePage running profile" />
