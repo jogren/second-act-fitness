@@ -11,6 +11,36 @@
   margin-bottom: 30px;
 }
 
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  padding: 20px 60px;
+  margin-bottom: 20px;
+}
+
+.article_BookingForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.article_calendar-time {
+  display: flex;
+}
+
+.react-calendar {
+  width: 45%;
+  margin-right: 5%;
+}
+
+.react-calendar__navigation__label {
+  font-size: 14px;
+}
+
+.react-calendar__tile {
+  font-size: 16px;
+}
+
 .pick-appo-list {
     display: flex;
     justify-content: center;
@@ -55,25 +85,23 @@
   background-color: #006edc
 }
 
-.calendar-container {
+.booking-container {
   display: flex;
-  padding: 20px 60px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin: 0 auto;
 }
 
-.react-calendar {
-  width: 45%;
-  margin-right: 5%;
-}
-
-.react-calendar__navigation__label {
+.booking-container button {
+  width: 200px;
+  height: 40px;
   font-size: 14px;
+  margin: 5px;
+  color: #fff;
+  background-color: #006edc;
 }
 
-.react-calendar__tile {
-  font-size: 16px;
-}
-
-.booking-container p {
-  text-align: center;
+.booking-container button:disabled {
+  background-color: grey;
 }
