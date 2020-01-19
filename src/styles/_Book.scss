@@ -114,6 +114,7 @@
 
 .booking-container {
   display: flex;
+  justify-content: center;
   width: 50%;
 }
 
@@ -123,10 +124,9 @@
   align-items: center;
   border: 1px solid #CCCCCC;
   padding: 30px 20px;
-  margin-left: 20px;
   position: sticky;
   bottom: 0;
-  width: 200px;
+  width: 215px;
   height: 165px;
 }
 

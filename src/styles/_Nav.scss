@@ -47,4 +47,13 @@ nav button {
   background: none;
   color: #F5F5F5;
   margin-right: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+nav button:hover {
+  color: #234469;
+  background-color: #F5F5F5;
+
 }
