@@ -22,27 +22,29 @@ export class Login extends Component {
     return (
       <section className="Login_section">
         <article className="login-container">
-          <h4>Login</h4>
+          <h2>Login</h2>
           <form className="login-form">
-            <input
-              className="login-email"
-              type="text"
-              placeholder="Email"
-              name="loginEmail"
-              value={loginEmail}
-              onChange={(e) => this.handleChange(e)}
-              autoComplete="username"
-            />
-            <input
-              className="login-password"
-              type="password"
-              placeholder="Password"
-              name="loginPassword"
-              value={loginPassword}
-              onChange={(e) => this.handleChange(e)}
-              autoComplete="current-password"
-            />
-            <button className="login-button" disabled={!loginEmail || !loginPassword} onClick={(e) => this.submitLogin(e)}>Login</button>
+            <label>Email
+              <input
+                className="login-email"
+                type="text"
+                name="loginEmail"
+                value={loginEmail}
+                onChange={(e) => this.handleChange(e)}
+                autoComplete="username"
+              />
+            </label>
+            <label>Password
+              <input
+                className="login-password"
+                type="password"
+                name="loginPassword"
+                value={loginPassword}
+                onChange={(e) => this.handleChange(e)}
+                autoComplete="current-password"
+              />
+            </label>
+            <button className="login-button" disabled={!loginEmail || !loginPassword} onClick={(e) => this.submitLogin(e)}>Submit</button>
             {/* {this.props.hasErroredReducer && <p>Please enter a valid email and password</p>} */}
           </form>
         </article>
