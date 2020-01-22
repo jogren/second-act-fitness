@@ -6,9 +6,6 @@ import { Book } from '../Book/Book';
 import { Login } from '../Login/Login';
 import { HomePage } from '../HomePage/HomePage';
 import { Route } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { CSSTransition, TransitionGroup } from "react-transition-group";
-
 
 
 class App extends Component {
