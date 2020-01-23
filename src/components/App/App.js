@@ -45,18 +45,7 @@ class App extends Component {
             <Nav />
             <article className="about-shell">
               <div className="about-header">
-                {/* <TransitionGroup>
-                  <CSSTransition
-                    key={this.state.currentQuote}
-                    // timeout={1000}
-                    classNames="messageout"
-                  > */}
-                    {/* <div style={{ marginTop: 20 }}>
-                      <img className="centered-image" src={this.state.selected.url} />
-                    </div> */}
                   <h4>{this.state.currentQuote}</h4>
-                  {/* </CSSTransition>
-                </TransitionGroup> */}
               </div>
             </article>
             <About /> 
