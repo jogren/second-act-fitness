@@ -1,6 +1,6 @@
 # Second Act Fitness
 
-This site was designed for Second Act Fitness LLC to tell their story, promote the brand, and allow users to book in-home fitness training appointments online. This site is live at [http://second-act-fitness-fe.herokuapp.com/](http://second-act-fitness-fe.herokuapp.com/)
+This site was designed for Second Act Fitness LLC to tell their story, promote the brand, and allow users to book in-home fitness training appointments online. This site is live at [https://second-act-fitness.herokuapp.com](https://second-act-fitness.herokuapp.com/)
 
 ### Images
 
