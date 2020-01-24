@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Second Act Fitness
 
-## Available Scripts
+This site was designed for Second Act Fitness LLC to tell their story, promote the brand, and allow users to book in-home fitness training appointments online. This site is live at [www.secondactfitnessmpls.com](https://www.secondactfitnessmpls.com)
 
-In the project directory, you can run:
+### Images
 
-### `npm start`
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 27 51 AM" src="https://user-images.githubusercontent.com/19739235/73081108-42783200-3e84-11ea-86ab-c618115dc2f5.png">
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 28 02 AM" src="https://user-images.githubusercontent.com/19739235/73081122-4906a980-3e84-11ea-9fe6-8176340a3483.png">
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 33 17 AM" src="https://user-images.githubusercontent.com/19739235/73081134-4e63f400-3e84-11ea-8e0a-2b3ab3ec6698.png">
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 28 41 AM" src="https://user-images.githubusercontent.com/19739235/73081156-54f26b80-3e84-11ea-9dbb-a57dd85e1ada.png">
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 31 54 AM" src="https://user-images.githubusercontent.com/19739235/73081160-5885f280-3e84-11ea-8750-52c23dbcdd44.png">
+<img width="1440" alt="Screen Shot 2020-01-24 at 8 32 45 AM" src="https://user-images.githubusercontent.com/19739235/73081167-5ae84c80-3e84-11ea-8746-d14b3a54cb5f.png">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Tech Stack
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- React
+- React Router
+- Sass
+- Node
+- Express
