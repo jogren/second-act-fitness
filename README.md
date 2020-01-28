@@ -2,6 +2,14 @@
 
 This site was designed for Second Act Fitness LLC to tell their story, promote the brand, and allow users to book in-home fitness training appointments online. This site is live at [https://second-act-fitness.herokuapp.com](https://second-act-fitness.herokuapp.com/)
 
+## Getting Started
+
+Clone down the repo and install the dependencies with `npm install`.
+
+Run `npm start` and visit http://localhost:3000 to view the application in the browser.
+
+Run the test suite with `npm test`.
+
 ### Images
 
 <img width="1440" alt="Screen Shot 2020-01-24 at 8 27 51 AM" src="https://user-images.githubusercontent.com/19739235/73081108-42783200-3e84-11ea-86ab-c618115dc2f5.png">
