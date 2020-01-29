@@ -16,17 +16,7 @@ export class BookingForm extends Component {
   }
 
   handleChange = (e) => {
-    const { name, email, street, city } = this.state;
-    this.setState({ [e.target.name]: e.target.value })
-    if(name && email && street && city) {
-      this.props.toggleBookEnabled();
-    }
-
-  }
-
-  validateEmail = email => {
-    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(String(email).toLowerCase());
+    this.setState({ [e.target.name]: e.target.value }, () => this.props.toggleBookEnabled(this.state))
   }
 
   render() {
