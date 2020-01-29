@@ -122,13 +122,15 @@ export class Book extends Component {
             { !isBookingSubmitted ? 
             <section className="booking-confirmation">
               <h3>In Home Session</h3>
-              <p>1 hr | $25</p>
+              <p className="hour-and-rate">1 hr | $25</p>
               { this.handleBookingWindow() }
               { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
               {view === 'booking' && <button disabled={!isBookEnabled} onClick={this.submitBooking}>Book</button> }
             </section>
             :
-            <p>Thank you for booking an appointment!</p>
+            <section className="booking-thank-you">
+              <p>Thank you for booking an appointment!</p>
+            </section>
             }
           </article>
         </div>
