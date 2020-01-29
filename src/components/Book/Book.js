@@ -9,17 +9,26 @@ export class Book extends Component {
       date: new Date(),
       time: '',
       view: 'calendar',
-      isBookEnabled: false
+      isBookEnabled: false,
+      bookingInfo: {}
     }
   }
 
   handleSelectDate = date => {
-    this.setState({ date })
-    this.setState({ time: '' })
+    this.setState({ 
+      date, 
+      time: '' 
+    })
+    // this.setState({ time: '' })
   }
 
   handleSelectTime = (time) => {
     this.setState({ time })
+  }
+
+  validateEmail = email => {
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
   }
 
   changeView = () => {
@@ -29,15 +38,32 @@ export class Book extends Component {
     } else {
       this.setState({ view: 'calendar' });
     }
-    this.setState({ isBookEnabled: false })
+    this.setState({ 
+      isBookEnabled: false,
+      bookingInfo: {}
+    })
   }
 
-  toggleBookEnabled = ({name, email, phone, street, city}) => {
+  toggleBookEnabled = (state) => {
+    const { name, email, phone, street, city } = state;
     if (name && email && phone && street && city) {
       this.setState({ isBookEnabled: true });
     } else {
       this.setState({ isBookEnabled: false });
     } 
+    this.setState({ bookingInfo: state })
+  }
+
+  submitBooking = () => {
+    const { email } = this.state.bookingInfo;
+    const isValidEmail = this.validateEmail(email)
+    if(isValidEmail) {
+      // post to database
+      // thank you for booking
+      // back to main booking screen with 
+    }
+    console.log(isValidEmail)
+    console.log(this.state.bookingInfo)
   }
 
   handleBookingWindow = () => {
@@ -95,7 +121,7 @@ export class Book extends Component {
               <p>1 hr | $25</p>
               { this.handleBookingWindow() }
               { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
-              {view === 'booking' && <button disabled={!isBookEnabled}>Book</button> }
+              {view === 'booking' && <button disabled={!isBookEnabled} onClick={this.submitBooking}>Book</button> }
             </section>
           </article>
         </div>
