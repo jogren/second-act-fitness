@@ -29,6 +29,7 @@ export class Book extends Component {
     } else {
       this.setState({ view: 'calendar' });
     }
+    this.setState({ isBookEnabled: false })
   }
 
   toggleBookEnabled = ({name, email, phone, street, city}) => {
@@ -96,7 +97,6 @@ export class Book extends Component {
               { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
               {view === 'booking' && <button disabled={!isBookEnabled}>Book</button> }
             </section>
-
           </article>
         </div>
       </section>
