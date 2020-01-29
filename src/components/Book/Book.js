@@ -59,8 +59,6 @@ export class Book extends Component {
     const isValidEmail = this.validateEmail(email)
     if(isValidEmail) {
       // post to database
-      // thank you for booking
-      // back to main booking screen with 
       this.setState({ isBookingSubmitted: true })
       setTimeout(() => { 
         this.setState({
@@ -113,7 +111,7 @@ export class Book extends Component {
             />
             <div className="pick-appo-list">
               <div className="appo-list-container">
-                {inputList}
+                { inputList }
               </div>
             </div> 
           </article> 
