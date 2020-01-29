@@ -16,12 +16,7 @@ export class BookingForm extends Component {
   }
 
   handleChange = (e) => {
-    const { name, email, street, city } = this.state;
-    this.setState({ [e.target.name]: e.target.value })
-    if(name && email && street && city) {
-      this.props.toggleBookEnabled();
-    }
-
+    this.setState({ [e.target.name]: e.target.value }, () => this.props.toggleBookEnabled(this.state))
   }
 
   validateEmail = email => {

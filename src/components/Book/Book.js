@@ -31,8 +31,12 @@ export class Book extends Component {
     }
   }
 
-  toggleBookEnabled = () => {
-    this.setState({ isBookEnabled: this.state.isBookEnabled ? false : true });
+  toggleBookEnabled = ({name, email, phone, street, city}) => {
+    if (name && email && phone && street && city) {
+      this.setState({ isBookEnabled: true });
+    } else {
+      this.setState({ isBookEnabled: false });
+    } 
   }
 
   handleBookingWindow = () => {
