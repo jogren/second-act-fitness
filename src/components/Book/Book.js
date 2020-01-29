@@ -10,6 +10,7 @@ export class Book extends Component {
       time: '',
       view: 'calendar',
       isBookEnabled: false,
+      isBookingSubmitted: false,
       bookingInfo: {}
     }
   }
@@ -19,7 +20,6 @@ export class Book extends Component {
       date, 
       time: '' 
     })
-    // this.setState({ time: '' })
   }
 
   handleSelectTime = (time) => {
@@ -61,22 +61,25 @@ export class Book extends Component {
       // post to database
       // thank you for booking
       // back to main booking screen with 
+      this.setState({ isBookingSubmitted: true })
+      setTimeout(() => { 
+        this.setState({
+          date: new Date(),
+          time: '',
+          view: 'calendar',
+          isBookEnabled: false,
+          isBookingSubmitted: false,
+          bookingInfo: {} 
+        }) 
+      }, 3000);
+    } else {
+      console.log('not valid email')
     }
-    console.log(isValidEmail)
-    console.log(this.state.bookingInfo)
   }
 
   handleBookingWindow = () => {
     const { date, time } = this.state;
-    let dayObj = {
-      0: 'Sunday',
-      1: 'Monday',
-      2: 'Tuesday',
-      3: 'Wednesday',
-      4: 'Thursday',
-      5: 'Friday',
-      6: 'Saturday'
-    }
+    let dayObj = { 0: 'Sunday', 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday' }
     if(date && time) {
       return <p>{dayObj[date.getDay()]}, {date.getMonth() + 1}/{date.getDate()}/{date.getFullYear()} | {time}</p>
     } else if(date) {
@@ -87,7 +90,7 @@ export class Book extends Component {
   }
 
   render() {
-    const { date, time, view, isBookEnabled } = this.state;
+    const { date, time, view, isBookEnabled, isBookingSubmitted } = this.state;
     let timeOptions = ['6:00am', '7:00am', '8:00am', '9:00am', '6:00pm', '7:00pm', '9:00pm'];
     let inputList = timeOptions.map((option, index) => {
       let borderClass = option === time ? 'time-item-selected' : 'time-item-not-selected'
@@ -116,6 +119,7 @@ export class Book extends Component {
           </article> 
           }
           <article className="booking-container">
+            { !isBookingSubmitted ? 
             <section className="booking-confirmation">
               <h3>In Home Session</h3>
               <p>1 hr | $25</p>
@@ -123,8 +127,12 @@ export class Book extends Component {
               { view === 'calendar' && <button onClick={this.changeView} disabled={!time || !date}>Next</button> }
               {view === 'booking' && <button disabled={!isBookEnabled} onClick={this.submitBooking}>Book</button> }
             </section>
+            :
+            <p>Thank you for booking an appointment!</p>
+            }
           </article>
         </div>
+
       </section>
     )
   }
